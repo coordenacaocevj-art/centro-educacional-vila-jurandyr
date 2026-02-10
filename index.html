@@ -8,28 +8,46 @@
   <style>
     body {
       font-family: "Segoe UI", Arial, sans-serif;
-    margin: 0;
-    background: #2f6b4f; /* verde institucional */
-    color: #333;
-}
+      margin: 0;
+      background: #2f6b4f; /* verde institucional */
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
 
     header img {
-    display: block;
-    margin: 0 auto 12px auto;
-    height: 70px;          /* TAMANHO REAL DA LOGO */
-    width: auto;
-    background: #ffffff;
-    padding: 8px;
-    border-radius: 6px;
-}
+      display: block;
+      margin: 0 auto 15px auto;
+      height: 70px;       /* controle real do tamanho */
+      width: auto;
+      background: #ffffff;
+      padding: 8px;
+      border-radius: 6px;
+    }
+
+    header h1 {
+      color: #ffffff;
+      margin: 10px 0 6px;
+      font-weight: 600;
+    }
+
+    header p {
+      color: #ffffff;
+      font-style: italic;
+      margin: 0;
+      opacity: 0.9;
+    }
 
     section {
       background: #ffffff;
-    padding: 30px 20px;
-    max-width: 900px;
-    margin: 30px auto;
-    border-radius: 8px;
-}
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: 30px auto;
+      border-radius: 8px;
+    }
 
     h2 {
       color: #2f6b4f;
@@ -56,24 +74,25 @@
     .whatsapp {
       display: block;
       text-align: center;
-      margin: 25px 0;
+      margin: 30px 0;
     }
 
     .whatsapp a {
       background: #25d366;
       color: white;
-      padding: 15px 20px;
+      padding: 15px 22px;
       border-radius: 50px;
       text-decoration: none;
       font-size: 18px;
       font-weight: bold;
+      display: inline-block;
     }
 
     footer {
       text-align: center;
       padding: 15px;
       font-size: 14px;
-      color: #777;
+      color: #e6f2ec;
     }
   </style>
 </head>
@@ -88,13 +107,17 @@
 
   <section>
     <h2>Mensalidades</h2>
-    <p class="valores">Valores a partir de <strong>R$ 370,00</strong></p>
+    <p class="valores">
+      Valores a partir de <strong>R$ 370,00</strong>
+    </p>
   </section>
 
   <section>
     <h2>Portfólio da Escola</h2>
-    <p>Você pode navegar pelo nosso portfólio abaixo.  
-    <br>Os links do WhatsApp dentro do PDF são clicáveis.</p>
+    <p>
+      Você pode navegar pelo nosso portfólio abaixo.<br>
+      Os links do WhatsApp dentro do PDF são clicáveis.
+    </p>
 
     <div class="pdf-container">
       <iframe src="portfolio.pdf"></iframe>
@@ -113,6 +136,7 @@
 
 </body>
 </html>
+
 
 
 
