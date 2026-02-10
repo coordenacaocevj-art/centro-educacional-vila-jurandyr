@@ -59,6 +59,8 @@
       margin-top: 10px;
     }
 
+    /* ===== PDF ===== */
+
     .pdf-container {
       margin-top: 20px;
       height: 600px;
@@ -71,7 +73,52 @@
       border-radius: 6px;
     }
 
-    /* ===== BOTÕES DE CONTATO (CORREÇÃO DEFINITIVA) ===== */
+    /* ===== VISIBILIDADE POR DISPOSITIVO ===== */
+
+    .desktop-only {
+      display: block;
+    }
+
+    .mobile-only {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .desktop-only {
+        display: none;
+      }
+
+      .mobile-only {
+        display: block;
+      }
+    }
+
+    /* ===== BOTÃO PDF ===== */
+
+    .btn-pdf {
+      display: inline-block;
+      background: #2f6b4f;
+      color: #ffffff;
+      padding: 14px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .btn-pdf:hover {
+      opacity: 0.9;
+    }
+
+    .aviso-mobile {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    /* ===== BOTÕES DE CONTATO ===== */
 
     .contato {
       display: flex;
@@ -92,8 +139,6 @@
       font-weight: 600;
       text-decoration: none;
       color: #fff;
-      width: auto;
-      max-width: fit-content;
       transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
@@ -140,8 +185,20 @@
       Conheça um pouco da nossa proposta pedagógica, estrutura e vivências que fazem parte do dia a dia dos nossos alunos.
     </p>
 
-    <div class="pdf-container">
+    <!-- PDF PARA DESKTOP -->
+    <div class="pdf-container desktop-only">
       <iframe src="portfolio.pdf"></iframe>
+    </div>
+
+    <!-- BOTÃO PARA CELULAR -->
+    <div class="mobile-only">
+      <p class="aviso-mobile">
+        Para melhor visualização no celular, abra o portfólio em uma nova aba.
+      </p>
+
+      <a href="portfolio.pdf" target="_blank" class="btn-pdf">
+        📄 Abrir Portfólio da Escola
+      </a>
     </div>
   </section>
 
