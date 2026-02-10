@@ -94,6 +94,36 @@
       font-size: 14px;
       color: #e6f2ec;
     }
+    .contato {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 22px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.btn.whatsapp {
+  background: #25d366;
+}
+
+.btn.instagram {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
   </style>
 </head>
 
@@ -115,8 +145,7 @@
   <section>
     <h2>Portfólio da Escola</h2>
     <p>
-      Você pode navegar pelo nosso portfólio abaixo.<br>
-      Os links do WhatsApp dentro do PDF são clicáveis.
+      Conheça um pouco da nossa proposta pedagógica, estrutura e vivências que fazem parte do dia a dia dos nossos alunos.<br>
     </p>
 
     <div class="pdf-container">
@@ -124,11 +153,15 @@
     </div>
   </section>
 
-  <div class="whatsapp">
-    <a href="https://wa.me/5521991978356" target="_blank">
-      💬 Falar com a escola no WhatsApp
-    </a>
-  </div>
+  <div class="contato">
+  <a class="btn whatsapp" href="https://wa.me/5521991978356" target="_blank">
+    💬 WhatsApp
+  </a>
+
+  <a class="btn instagram" href="https://www.instagram.com/cevilajurandyr" target="_blank">
+    📸 Instagram
+  </a>
+</div>
 
   <footer>
     © Centro Educacional Vila Jurandyr
@@ -136,6 +169,7 @@
 
 </body>
 </html>
+
 
 
 
