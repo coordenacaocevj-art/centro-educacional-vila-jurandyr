@@ -9,7 +9,7 @@
     body {
       font-family: "Segoe UI", Arial, sans-serif;
       margin: 0;
-      background: #2f6b4f; /* verde institucional */
+      background: #2f6b4f;
       color: #333;
     }
 
@@ -21,7 +21,7 @@
     header img {
       display: block;
       margin: 0 auto 15px auto;
-      height: 70px;       /* controle real do tamanho */
+      height: 70px;
       width: auto;
       background: #ffffff;
       padding: 8px;
@@ -71,21 +71,43 @@
       border-radius: 6px;
     }
 
-    .whatsapp {
-      display: block;
-      text-align: center;
+    /* ===== BOTÕES DE CONTATO (CORREÇÃO DEFINITIVA) ===== */
+
+    .contato {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
       margin: 30px 0;
+      flex-wrap: wrap;
     }
 
-    .whatsapp a {
-      background: #25d366;
-      color: white;
-      padding: 15px 22px;
-      border-radius: 50px;
+    .contato a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 600;
       text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      display: inline-block;
+      color: #fff;
+      width: auto;
+      max-width: fit-content;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .contato a:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
+    .contato a.whatsapp {
+      background-color: #25d366;
+    }
+
+    .contato a.instagram {
+      background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
     }
 
     footer {
@@ -94,41 +116,6 @@
       font-size: 14px;
       color: #e6f2ec;
     }
-    .contato {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin: 30px 0;
-  flex-wrap: wrap;
-}
-
-.btn {
-  padding: 14px 22px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
-
-.btn.whatsapp {
-  background: #25d366;
-}
-
-.btn.instagram {
-  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
-  padding: 14px 22px;      /* igual ao WhatsApp */
-  border-radius: 50px;
-  min-width: unset;       /* remove tamanho mínimo */
-}
   </style>
 </head>
 
@@ -150,7 +137,7 @@
   <section>
     <h2>Portfólio da Escola</h2>
     <p>
-      Conheça um pouco da nossa proposta pedagógica, estrutura e vivências que fazem parte do dia a dia dos nossos alunos.<br>
+      Conheça um pouco da nossa proposta pedagógica, estrutura e vivências que fazem parte do dia a dia dos nossos alunos.
     </p>
 
     <div class="pdf-container">
@@ -159,14 +146,14 @@
   </section>
 
   <div class="contato">
-  <a class="btn whatsapp" href="https://wa.me/5521991978356" target="_blank">
-    💬 WhatsApp
-  </a>
+    <a class="whatsapp" href="https://wa.me/5521991978356" target="_blank">
+      💬 WhatsApp
+    </a>
 
-  <a class="btn instagram" href="https://www.instagram.com/cevilajurandyr" target="_blank">
-    📸 Instagram
-  </a>
-</div>
+    <a class="instagram" href="https://www.instagram.com/cevilajurandyr" target="_blank">
+      📸 Instagram
+    </a>
+  </div>
 
   <footer>
     © Centro Educacional Vila Jurandyr
@@ -174,6 +161,7 @@
 
 </body>
 </html>
+
 
 
 
